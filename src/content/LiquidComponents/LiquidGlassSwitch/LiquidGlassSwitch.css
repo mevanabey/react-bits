@@ -1,0 +1,188 @@
+.liquid-glass-switch-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.liquid-glass-switch {
+  position: relative;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: var(--filter-id) blur(12px) saturate(1.8);
+  -webkit-backdrop-filter: var(--filter-id) blur(12px) saturate(1.8);
+  transition: all 0.3s ease;
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.15),
+    inset 0 1px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Size variants */
+.liquid-glass-switch-sm {
+  width: 48px;
+  height: 26px;
+  padding: 3px;
+}
+
+.liquid-glass-switch-md {
+  width: 60px;
+  height: 34px;
+  padding: 4px;
+}
+
+.liquid-glass-switch-lg {
+  width: 72px;
+  height: 42px;
+  padding: 5px;
+}
+
+/* Checked state */
+.liquid-glass-switch-checked {
+  background: linear-gradient(
+    135deg,
+    rgba(82, 39, 255, 0.3) 0%,
+    rgba(124, 58, 237, 0.2) 100%
+  );
+  border: 1px solid rgba(82, 39, 255, 0.35);
+  box-shadow:
+    0 6px 24px rgba(82, 39, 255, 0.35),
+    inset 0 1px 2px rgba(82, 39, 255, 0.2);
+}
+
+/* Disabled state */
+.liquid-glass-switch-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* SVG Filter */
+.liquid-glass-switch__filter {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  z-index: -1;
+}
+
+/* Background Layer */
+.liquid-glass-switch__background {
+  position: absolute;
+  inset: 0;
+  border-radius: 100px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+.liquid-glass-switch__background-indicator {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(82, 39, 255, 0.4) 0%,
+    rgba(124, 58, 237, 0.3) 100%
+  );
+  border-radius: 100px;
+}
+
+.liquid-glass-switch__background-text {
+  position: relative;
+  font-size: 9px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.15);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  filter: blur(0.5px);
+  user-select: none;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.liquid-glass-switch-checked .liquid-glass-switch__background-text {
+  color: rgba(82, 39, 255, 0.3);
+  filter: blur(0.8px);
+  text-shadow:
+    1px 0 rgba(255, 0, 0, 0.2),
+    -1px 0 rgba(0, 255, 255, 0.2);
+}
+
+/* Switch Handle */
+.liquid-glass-switch-handle {
+  position: relative;
+  aspect-ratio: 1;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.8) 100%
+  );
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.25),
+    0 4px 12px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  z-index: 3;
+  overflow: hidden;
+}
+
+.liquid-glass-switch-handle-shimmer {
+  position: absolute;
+  inset: -20%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(255, 255, 255, 0.6) 45deg,
+    transparent 90deg,
+    transparent 270deg,
+    rgba(255, 255, 255, 0.6) 315deg,
+    transparent 360deg
+  );
+  pointer-events: none;
+}
+
+.liquid-glass-switch-checked .liquid-glass-switch-handle {
+  box-shadow:
+    0 2px 8px rgba(82, 39, 255, 0.3),
+    0 4px 12px rgba(82, 39, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Label */
+.liquid-glass-switch-label {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  font-weight: 500;
+  user-select: none;
+}
+
+/* Hover effects */
+.liquid-glass-switch:not(.liquid-glass-switch-disabled):hover {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.liquid-glass-switch-checked:not(.liquid-glass-switch-disabled):hover {
+  border-color: rgba(82, 39, 255, 0.5);
+  box-shadow:
+    0 8px 32px rgba(82, 39, 255, 0.45),
+    inset 0 1px 2px rgba(82, 39, 255, 0.2);
+}
+
+/* Active state */
+.liquid-glass-switch:not(.liquid-glass-switch-disabled):active .liquid-glass-switch-handle {
+  transform: scaleX(1.15);
+}
+
+/* Focus visible state */
+.liquid-glass-switch:focus-visible {
+  outline: 2px solid rgba(82, 39, 255, 0.8);
+  outline-offset: 2px;
+}

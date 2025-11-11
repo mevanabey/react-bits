@@ -99,7 +99,10 @@ const components = {
 const liquidComponents = {
   'liquid-button': () => import('../demo/LiquidComponents/LiquidButtonDemo'),
   'liquid-tabs': () => import('../demo/LiquidComponents/LiquidTabsDemo'),
-  'liquid-switch': () => import('../demo/LiquidComponents/LiquidSwitchDemo')
+  'liquid-switch': () => import('../demo/LiquidComponents/LiquidSwitchDemo'),
+  'liquid-glass-button': () => import('../demo/LiquidComponents/LiquidGlassButtonDemo'),
+  'liquid-glass-tabs': () => import('../demo/LiquidComponents/LiquidGlassTabsDemo'),
+  'liquid-glass-switch': () => import('../demo/LiquidComponents/LiquidGlassSwitchDemo')
 };
 
 const backgrounds = {
