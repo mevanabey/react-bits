@@ -119,7 +119,10 @@ export const CATEGORIES = [
     subcategories: [
       'Liquid Button',
       'Liquid Tabs',
-      'Liquid Switch'
+      'Liquid Switch',
+      'Liquid Glass Button',
+      'Liquid Glass Tabs',
+      'Liquid Glass Switch'
     ]
   },
   {
