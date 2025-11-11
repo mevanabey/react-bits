@@ -115,6 +115,14 @@ export const CATEGORIES = [
     ]
   },
   {
+    name: 'Liquid Components',
+    subcategories: [
+      'Liquid Button',
+      'Liquid Tabs',
+      'Liquid Switch'
+    ]
+  },
+  {
     name: 'Backgrounds',
     subcategories: [
       'Liquid Ether',

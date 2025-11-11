@@ -96,6 +96,12 @@ const components = {
   'staggered-menu': () => import('../demo/Components/StaggeredMenuDemo')
 };
 
+const liquidComponents = {
+  'liquid-button': () => import('../demo/LiquidComponents/LiquidButtonDemo'),
+  'liquid-tabs': () => import('../demo/LiquidComponents/LiquidTabsDemo'),
+  'liquid-switch': () => import('../demo/LiquidComponents/LiquidSwitchDemo')
+};
+
 const backgrounds = {
   'silk': () => import('../demo/Backgrounds/SilkDemo'),
   'aurora': () => import('../demo/Backgrounds/AuroraDemo'),
@@ -136,5 +142,6 @@ export const componentMap = {
   ...animations,
   ...textAnimations,
   ...components,
+  ...liquidComponents,
   ...backgrounds
 };

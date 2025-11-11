@@ -1,0 +1,133 @@
+.liquid-switch-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.liquid-switch {
+  position: relative;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.1),
+    inset 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Size variants */
+.liquid-switch-sm {
+  width: 44px;
+  height: 24px;
+  padding: 2px;
+}
+
+.liquid-switch-md {
+  width: 56px;
+  height: 32px;
+  padding: 3px;
+}
+
+.liquid-switch-lg {
+  width: 68px;
+  height: 40px;
+  padding: 4px;
+}
+
+/* Checked state */
+.liquid-switch-checked {
+  background: rgba(82, 39, 255, 0.2);
+  border: 1px solid rgba(82, 39, 255, 0.3);
+  box-shadow:
+    0 4px 16px rgba(82, 39, 255, 0.3),
+    inset 0 1px 2px rgba(82, 39, 255, 0.2);
+}
+
+/* Disabled state */
+.liquid-switch-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Switch background */
+.liquid-switch-background {
+  position: absolute;
+  inset: 0;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.liquid-switch-fill {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(82, 39, 255, 0.6) 0%,
+    rgba(124, 58, 237, 0.4) 100%
+  );
+  transform-origin: left center;
+}
+
+/* Switch handle */
+.liquid-switch-handle {
+  position: relative;
+  aspect-ratio: 1;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.7) 100%
+  );
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.liquid-switch-glow {
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(82, 39, 255, 0.4) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.liquid-switch-checked .liquid-switch-glow {
+  opacity: 1;
+}
+
+/* Label */
+.liquid-switch-label {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  font-weight: 500;
+  user-select: none;
+}
+
+/* Hover effects */
+.liquid-switch:not(.liquid-switch-disabled):hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.liquid-switch-checked:not(.liquid-switch-disabled):hover {
+  border-color: rgba(82, 39, 255, 0.5);
+  box-shadow:
+    0 6px 20px rgba(82, 39, 255, 0.4),
+    inset 0 1px 2px rgba(82, 39, 255, 0.2);
+}
+
+/* Active state */
+.liquid-switch:not(.liquid-switch-disabled):active .liquid-switch-handle {
+  transform: scaleX(1.1);
+}
