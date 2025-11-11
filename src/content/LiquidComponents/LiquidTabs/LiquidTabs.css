@@ -1,0 +1,79 @@
+.liquid-tabs-container {
+  width: 100%;
+}
+
+.liquid-tabs-list {
+  display: flex;
+  gap: 4px;
+  padding: 6px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  margin-bottom: 20px;
+}
+
+.liquid-tab {
+  position: relative;
+  flex: 1;
+  padding: 12px 24px;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+.liquid-tab:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.liquid-tab-active {
+  color: white;
+}
+
+.liquid-tab-background {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(82, 39, 255, 0.6) 0%,
+    rgba(124, 58, 237, 0.4) 100%
+  );
+  border-radius: 8px;
+  z-index: -1;
+  box-shadow:
+    0 4px 12px rgba(82, 39, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.liquid-tab-label {
+  position: relative;
+  z-index: 2;
+}
+
+.liquid-tabs-content {
+  position: relative;
+  min-height: 200px;
+}
+
+.liquid-tab-panel {
+  width: 100%;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
